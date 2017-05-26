@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">]>
+
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0" y="0" width="310" height="42" viewBox="0 0 310 42" xml:space="preserve">
+
+    <style type="text/css">
+        .fill-default       { fill: #EEEEEE; }
+        .fill-default:hover { fill: #FFFFFF; }
+        .fill-success       { fill: #8EBA7E; }
+        .fill-success:hover { fill: #7EAA6E; }
+        .border-default     { stroke: #006600; stroke-miterlimit: 10; }
+    </style>
+
+    <defs>
+        <path id="svg-button-right" d="M4.5,40.0302734c-2.2089844,0-4-1.7910156-4-4V4.5c0-2.2089844,1.7910156-4,4-4h285.1269531 c1.1694336,0,2.2802734,0.5117188,3.0405273,1.4008789l13.4775391,15.7651367c1.2792969,1.496582,1.2792969,3.7016602,0,5.1982422 l-13.4775391,15.7651367c-0.7602539,0.8891602-1.8710938,1.4008789-3.0405273,1.4008789H4.5z" />
+    </defs>
+
+    <!--use xlink:href="#svg-button-right" class="border-default fill-success"/-->
+    <use xlink:href="#svg-button-right" transform="translate(309,0) scale(-1,1)" class="border-default fill-default"/>
+
+</svg>

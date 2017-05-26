@@ -1,0 +1,48 @@
+<md-dialog aria-label="Lightbox" class="modal-body lightbox-modal-body"
+           md-swipe-left="Lightbox.nextImage()"
+           md-swipe-right="Lightbox.prevImage()">
+    <!-- navigation -->
+    <!-- close button -->
+    <md-button class="close-button" aria-hidden="true" ng-click="closeModal()">×</md-button>
+    <div ng-if="Lightbox.images.length > 1" class="nav-control">
+        <a id="prev-image" class="md-button nav-control" ng-click="Lightbox.prevImage()">
+            <i class="material-icons">navigate_before</i>
+        </a>
+        <a id="next-image" class="md-button" ng-click="Lightbox.nextImage()">
+            <i class="material-icons">navigate_next</i>
+        </a>
+    </div>
+    <div layout="row" layout-fill layout-align="center center" ng-show="Lightbox.loading" class="lightbox-loading">
+        <md-progress-circular md-mode="indeterminate" md-diameter="90"></md-progress-circular>
+    </div>
+    <div ng-hide="Lightbox.loading">
+        <div class="lightbox-image-container">
+            <!-- caption -->
+            <div class="lightbox-image-caption">
+                <span>{{Lightbox.imageCaption}}</span>
+            </div>
+
+            <!-- image -->
+            <img ng-if="!Lightbox.isVideo(Lightbox.image)" lightbox-src="{{Lightbox.imageUrl}}">
+
+            <!-- video -->
+            <div ng-if="Lightbox.isVideo(Lightbox.image)" class="embed-responsive embed-responsive-16by9">
+                <!-- video file embedded directly -->
+                <video ng-if="!Lightbox.isSharedVideo(Lightbox.image)"
+                       lightbox-src="{{Lightbox.imageUrl}}"
+                       controls
+                       autoplay="true"></video>
+
+                <!-- video embedded with an external service using
+                     `ng-videosharing-embed` -->
+                <embed-video ng-if="Lightbox.isSharedVideo(Lightbox.image)"
+                             lightbox-src="{{Lightbox.imageUrl}}"
+                             ng-href="{{Lightbox.imageUrl}}"
+                             iframe-id="lightbox-video"
+                             class="embed-responsive-item">
+                    <a ng-href="{{Lightbox.imageUrl}}">Watch video</a>
+                </embed-video>
+            </div>
+        </div>
+    </div>
+</md-dialog>

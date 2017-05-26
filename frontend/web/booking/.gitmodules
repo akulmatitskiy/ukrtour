@@ -1,0 +1,6 @@
+[submodule "App/Services/ClassLoader"]
+	path = App/Services/ClassLoader
+	url = https://github.com/symfony/ClassLoader.git
+[submodule "App/Services/SwiftMailer"]
+	path = App/Services/SwiftMailer
+	url = https://github.com/swiftmailer/swiftmailer.git

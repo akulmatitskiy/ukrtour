@@ -1,0 +1,29 @@
+.table-nonfluid {width: auto;}
+
+textarea.wysiwyg{min-height:200px}
+
+.nav-tabs {margin-bottom:15px}
+
+.panel-with-nav-tabs .panel-heading { padding-bottom: 0 }
+.panel-with-nav-tabs .panel-heading label { float: left; margin: 6px 1em 0 0; }
+.panel-with-nav-tabs .panel-heading .nav-tabs { float: left; margin-bottom: -1px; }
+.panel-with-nav-tabs .panel-heading:after{content: ' ';display: table;clear: both;}
+
+.panel-with-nav-tabs .panel-body-input { padding: 0 }
+.panel-with-nav-tabs .panel-body-input .form-control,
+.panel-with-nav-tabs .panel-body-input .input-group .input-group-addon { border-radius: 0; border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
+
+
+.uploadPhoto {position:relative;}
+.uploadPhoto .uploadPlaceholder { display: none; position:absolute; top:0; width:100%; height:100%; background-color: rgba(255, 255, 255, 0.84); text-align: center; border: 2px solid #BBBBBB; color: #616161; font-size: 18px; padding: 20% 0 0 0;}
+
+
+.switchEditable .switchView { display: block;}
+.switchEditable .switchEdit { display: none;}
+.switchEditable .switched .switchView { display: none;}
+.switchEditable .switched .switchEdit { display: block;}

@@ -1,0 +1,972 @@
+.o-pane { width: 100%; height: 100%; }
+.o-pane, .o-page, .o-row { left: 0; right: 0; }
+.o-pane, .o-page, .o-col { top: 0; bottom: 0; }
+.o-pane, .o-page, .o-col, .o-row { overflow: hidden; position: absolute; }
+.o-scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.o-scroll-y { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+
+/* Workaround: in landscape mode, IEMobile makes bottom toolbar overlap the page, so shorten the page by 75px to compensate */
+.iemobile .page-o { bottom: -6px; }
+@media screen and (orientation:landscape) { .iemobile .page-o { bottom: 75px; } }
+
+#booking input {
+    border-bottom: none;
+}
+#booking-form {
+    padding: 20px 17px 20px 17px;
+}
+
+#booking-form .md-block {
+    margin: 18px;
+}
+
+#booking-form  label {
+    font-size: 1.2rem;
+}
+
+.servio-search-form {
+    opacity: 1.0;
+    border: none;
+    color: #000000;
+    text-align: left;
+    padding: 2% 7% 7% 7%;
+    text-transform: none;
+
+}
+
+.servio-booking-title {
+    width: 100%;
+    color: #2196f3;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+    font-weight: 900;
+    padding: 12px 0px;
+    background: #ebebeb;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 100;
+}
+
+.servio-search-room {
+    border: 0;
+    clear: both;
+    opacity: 1.0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.servio-search-input {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    clear: both;
+    margin: 10px 0;
+    text-align: left;
+    text-transform: none;
+}
+
+.servio-search-input-group {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    float: right;
+    width: 69%;
+    min-width: 72px;
+    min-height: 18px;
+    text-align: right;
+}
+
+.servio-search-input label {
+    margin: 5px 0;
+    color: #333;
+}
+
+.servio-search-input input,
+.servio-search-input select {
+    margin: 0;
+    padding: 0 6px;
+}
+
+select.servio-search-input-age {
+    width: 24%;
+    float: right;
+    padding: 0;
+    margin-left: 1%;
+    margin-right: 0px;
+}
+
+.servio-search-input-age {
+    float: left;
+    height: 3rem;
+}
+
+.servio-search-input-age .select-dropdown {
+    border-bottom: 1px solid #2196f3 !important;
+}
+
+.servio-search-input input:hover,
+.servio-search-input input:active,
+.servio-search-input input:focus,
+.servio-search-input select:hover,
+.servio-search-input select:active,
+.servio-search-input select:focus {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.servio-button {
+    color: #fff;
+    width: 100%;
+    height: 32px;
+    margin: 0px;
+    padding: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 640px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    background-color: #336699;
+    margin-top: 20px;
+}
+.servio-button:hover {
+    opacity:0.8;
+}
+
+.breadcrumbs {
+    margin: 20px 0px 10px 13px;
+}
+
+.breadcrumbs > span {
+    color: #97c3f3;
+}
+
+.breadcrumbs > span:after {
+    content: ">";
+}
+
+.breadcrumbs > span:last-child:after {
+    content: "";
+}
+
+.bt2 {
+    font-weight: 700;
+}
+span.label-primary{
+    background-color: #fff !important;
+}
+
+form#servioBookingForm {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.servio-button-left,
+.servio-button-right {
+    width: 100%;
+    padding: 0 0;
+    margin: 6px 0;
+    box-shadow: 0;
+    max-width: 200px;
+    border: 1px solid #000000;
+}
+
+.servio-button-right {
+    /*border-width: 6px 12px 6px 6px;
+    border-image: url('../img/button-right.svg') 9 18;*/
+    text-shadow: 0px 0px 1px #000000;
+}
+.servio-button-left, .servio-button-left:hover, .servio-button-left:focus, .servio-button-left:active, .servio-button-left:visited, .servio-button-left:active:hover,
+.servio-button-right, .servio-button-right:hover, .servio-button-right:focus, .servio-button-right:active, .servio-button-right:visited, .servio-button-right:active:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+}
+.servio-button-left, .servio-button-left:hover, .servio-button-left:focus, .servio-button-left:active, .servio-button-left:visited, .servio-button-left:active:hover {
+    color: #111;
+    background-color: #EEEEEE;
+}
+.servio-button-right, .servio-button-right:hover, .servio-button-right:focus, .servio-button-right:active, .servio-button-right:visited, .servio-button-right:active:hover {
+    color: #FFF;
+    background-color: #365B94;
+    padding: 5px;
+    max-width: 150px;
+    float: right;
+}
+.servio-button-left:hover, .servio-button-left:focus, .servio-button-left:active,
+.servio-button-right:hover, .servio-button-right:focus, .servio-button-right:active {
+    text-decoration: underline;
+}
+
+.hotelList {
+    float: left;
+    height: 20px;
+    padding: 185px 0;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    width: 25px;
+    background: #9A2645;
+    cursor: pointer;
+}
+
+.hotelSelect {
+    float: left;
+    height: 100%;
+    width: 587px;
+    padding: 10px;
+}
+
+.servio_block { padding: 1em; margin-bottom: 1em; }
+.servio_block h4 { color: #efe; font-size: 14px; margin: 0 0 1em 0; }
+
+#searchTable h3{
+    /*color: rgb(79, 79, 79);
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 27px;
+    line-height: 27px;
+    margin-bottom: 10px;*/
+}
+
+#searchTable td{
+    /*color: rgb(79, 79, 79);
+    padding: 10px;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;*/
+}
+
+.roomImageTd {
+    /*width: 260px;*/
+}
+
+.roomImage {
+    /*width: 240px;
+    height: auto;*/
+}
+
+.cost {
+    /*color: #EEE;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+
+    margin-bottom: 10px;*/
+}
+
+.warning {
+    /*    color: #990605;
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: bold;
+        margin-bottom: 10px;*/
+}
+#servioCompanyName {
+    /*width: 225px;
+    font-weight: bold;*/
+}
+
+#servioCompanyParam {
+    /*display: none;*/
+}
+
+/**
+    New styles
+*/
+.servio__error {
+    /*  background-color: #F2DEDE;
+      color: #a94442;
+      border-color: #ebccd1;
+      border-radius: 2px;
+      padding: 8px;
+      margin-bottom: 1em;*/
+}
+
+.bootstrap-dialog-message {
+
+    /*   color: #100;*/
+}
+
+.text-right{
+    /*   text-align: right;*/
+}
+
+/*.servioSearchFull__row { margin-bottom: .7em; }*/
+/*.servio__row { margin-bottom: 0.2em;}*/
+/*.servio__row label { margin: 0; float: left; text-align: left; line-height: inherit; }*/
+
+/*.servio_nextStep { float: right; }
+.servio_stepCounter { color: #7A0625; font-size: 1.2em; margin-bottom: 1em; }*/
+
+.servio__roomList .selectedRoom {/*position: absolute;right: .7em;top: .5em;font-style: italic;color: #A3A3A3;*/}
+.servio__roomList .selectedRoom strong {/*color: #7A0625;font-style: normal;*/}
+
+/*.servio__roomItem { clear: both; border-top: 1px solid #fff; padding-top: 1em; }
+.servio__roomItem .servio__roomPhoto { float: left; margin: 0 10px 0 0; }
+.servio__roomItem .servio__roomTitle { font-size: 15px; font-weight: bold; color: #ffd; margin-bottom: 6px; text-decoration: underline; }
+.servio__roomItem .servio__roomDescription { color: #eee; margin-bottom: 10px; }*/
+
+/*.servio__roomItem .servio__roomPrice { float: right; margin: 10px 0 10px 0; display: inline-block; text-align: right; }
+.servio__roomList .servio__roomSelect { float: right; margin: 10px 0 10px 15px; display: inline-block; }
+.servio__roomList .servio__roomSelect .nofreerooms { display: none; }*/
+
+/*.servio__roomItem.nofreerooms .servio__roomPhoto { opacity: 1.0; }
+.servio__roomItem.nofreerooms .servio__roomDescription,
+.servio__roomItem.nofreerooms .servio__roomTitle { color: #aaa; }*/
+
+.servio__form fieldset { border: 1px solid #A3D1A3; padding: 4px 6px; margin-bottom: 6px; }/*padding: 1em;margin:0 0 1em 0;display: block;}*/
+.servio__form input[type=text],
+.servio__form select,
+.servio__form textarea {
+    background-color: #eee;
+    color: #000;
+    line-height: inherit;
+    height: 18px;
+    margin: 0 0 4px 4px;
+    padding: 0 4px;
+    border: 0;
+}
+
+.servio__form textarea {
+    padding-top: 2px;
+    height: 7em;
+}
+
+.servio__formRowed label { display: inline-block; width: 40%; margin-right: 6px; text-align: left; }
+
+.servio__formRowed input[type=text],
+.servio__formRowed textarea,
+.servio__formRowed select {
+    width: 50%;
+}
+
+.servio__formHorizontal label { display: block; margin-top: .5em; margin-bottom: .5em; }
+.servio__formHorizontal input[type=text],
+.servio__formHorizontal textarea { display: block; min-width: 40%; }
+.servio__formHorizontal textarea { padding: .6em; height: 7em; width: 100%; }
+
+.servio__formInline label { display: inline;}
+.servio__formInline input { display: inline-block; }
+
+.servio__transferItem .servio__priceSummary { font-size: 140%; text-align: right; padding: .5em; margin: 1em 0; border-bottom: 1px solid #eee; }
+.servio__servicesPrices .servio__priceValue { color: #fff; border-bottom: 1px dashed #ccc; }
+
+.servio__servicesPrices ul { list-style: none; margin: 0; padding: 0; }
+.servio__servicesPrices > ul { border:0;border-bottom: 1px solid #ccc; padding-bottom: .5em; margin-bottom: .5em; }
+.servio__servicesPrices > ul > li { position: relative; }
+.servio__servicesPrices > ul > li:hover { cursor: help }
+.servio__servicesPrices > ul > li:hover .servio__priceDetail { display: block; }
+.servio__servicesPrices > ul > li:hover .servio__priceValue  { border-bottom-color: #fff; }
+
+.servio__servicesPrices .servio__priceDetail { background-color: rgba(255, 255, 255, 0.88); position: absolute; left: 3em; border: 1px solid rgba(177, 177, 177, 0.39); padding: 1em; display: none; z-index: 15; white-space: nowrap; }
+
+dl.servio__listDetail { margin: 0; }
+dl.servio__listDetail dt { display: block; margin-right: 1em; width: 40%; height: 1em; text-align: right; font-weight: normal; float: left; clear: both; font-size: 13px; }
+dl.servio__listDetail dt:after { content: ':'; }
+dl.servio__listDetail dd { display: block; margin: .4em -42% .4em 42%; width: 58%; height: 1em; font-weight: bold; font-size: 13px; }
+
+table.servio__reservationPriceDetail { width: 100%; color: #efe; }
+table.servio__reservationPriceDetail th { text-align: left; font-size: 110%; border-bottom: 1px solid #A3D1A3; }
+table.servio__reservationPriceDetail td  { padding: .3em 0 .3em 1em; }
+table.servio__reservationPriceDetail .servio__priceTotal { text-align: right; font-size: 114%; padding-top: 8px; border-top: 1px solid #A3D1A3; color: #fff; }
+table.servio__reservationPriceDetail .servio__priceTotal .servio__priceValue { font-weight: bold; }
+
+.servio__confirmForm .servio__priceSummary { font-size: 140%; text-align: right; padding: 0; margin: 10px 0; border-bottom: 1px solid #A3D1A3; }
+.servio__confirmForm .servio__confirmBox { text-align: right; }
+.servio__confirmForm .servio__confirmCheckbox { float: right; }
+
+.servio__paymentForm { border-bottom: 1px solid #7A0625; padding-bottom: 1em; }
+.servio__paymentForm .servio__priceSummary { font-size: 130%; float: left; margin-right: 1em; line-height: 28px; border-bottom: 1px solid #7A0625; }
+
+#booking .input-field,
+#booking .select-dropdown {
+    margin: 0;
+}
+
+#booking-hotel  {
+    width: 100%;
+    background: #2196f3;
+    padding: 0 15px;
+    color: #fff;
+    height: 45px;
+}
+
+#booking-hotel .caret {
+    color: #fff;
+}
+
+#booking-hotel select {
+    height: 45px;
+    width: 100%;
+}
+
+.servio-search-form .card {
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.booking-date,
+.booking-guests {
+    position: relative;
+}
+
+#guests {
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;    
+}
+
+.booking-guests {
+    width: 46%;
+    float: left;
+}
+
+#guests-adult {
+    margin: 10px 8% 10px 0;
+}
+
+#extraBeds {
+    margin: 15px 0 0 0;
+}
+
+#touristTax label,
+#extraBeds label {
+    color: #2196f3;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+#booking-dates {
+    float: left;
+}
+
+.booking-date input,
+.booking-guests input.select-dropdown {
+    font-size: 2rem;
+    height: 70px;
+    padding: 20px 2px 1px;
+    box-sizing: border-box;
+}
+
+.booking-date label,
+.booking-guests label {
+    position: absolute;
+    font-size: 1.2rem;
+    color: #000 !important;
+    font-weight: 300;
+}
+
+#booking .card,
+#servio-search-button {
+    border: 2px solid #2196f3;
+}
+
+#rooms-num {
+    margin: 0 0 7px !important;
+}
+
+#servio-search-button {
+    margin:  0 0 10px 0;
+    width: 100%;
+    height: 45px;
+    background: #fff !important;
+    border: 2px solid #2196f3;
+    color: #2196f3;
+    font-size: 0.875rem;
+    font-weight: 900;
+}
+
+#find-hotel {
+    width: 100%;
+    float: left;
+    clear: both;
+    text-align: center;
+}
+
+#find-hotel .material-icons {
+    color: #2196f3;
+    margin: 0 5px 0 0;
+}
+
+#find-hotel a {
+    margin: 0 auto;
+    height: 30px;
+    line-height: 25px;
+}
+
+#find-hotel span {
+    border-bottom: 1px dashed #2196f3;
+    line-height: 1.2rem;
+    color: #2196f3;
+    text-transform: none;
+    font-size: 0.88rem;
+}
+
+#text-status-complete {
+    padding: 50px;
+    min-height: 500px;
+}
+
+#servioBookingContent fieldset {
+    border: none;
+}
+
+#reserv-dates {
+    margin: 10px 29px;
+}
+
+@media (max-width: 2560px) and (min-width: 1920px) {
+    .xdsoft_datetimepicker {
+        font-size: 24px;
+        width: 420px !important;
+    }
+    .xdsoft_datetimepicker .xdsoft_calendar td,
+    .xdsoft_datetimepicker .xdsoft_calendar th {
+        width: 14.2857142%;
+        font-size: 1em !important; 
+        height: 33px !important;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_label {
+        font-size: 1em !important;
+        line-height: 1em !important;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div {
+        font-size: 1em !important;
+        line-height: 1.5em !important;
+        height: 42px !important;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_datepicker {
+        width: 323px !important;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_timepicker {
+        width: 70px !important;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+        height: 193px !important;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_month {
+        width: 140px !important;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_year {
+        width: 85px !important;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option {
+        padding: 5px 15px 2px 10px !important;
+    }
+
+}
+
+@media (max-width: 1680px) {
+
+    .servio-search-form {
+        padding: 2% 7% 6% 7%;
+    }
+
+    .servio-booking-title {
+        font-size: 2rem;
+    }
+
+    .booking-date input,
+    .booking-guests select {
+        font-size: 1.5rem;
+        height: 50px;
+        padding: 20px 2px 1px;
+    }
+
+    .booking-date label,
+    .booking-guests label {
+        font-size: 1rem;
+    }
+
+    #extraBeds {
+        margin: 10px 0 0 0;
+    }
+
+}
+
+@media (max-width: 1440px) {
+
+    .servio-search-form {
+        padding: 1% 7% 4% 7%;
+    }
+
+    .servio-booking-title {
+        font-size: 1.7rem;
+        padding: 10px 0;
+    }
+
+    .booking-date input,
+    .booking-guests select {
+        font-size: 1.5rem;
+        height: 45px;
+        padding: 16px 2px 1px;
+    }
+
+    .booking-date label,
+    .booking-guests label {
+        font-size: 0.9rem;
+    }
+
+    #extraBeds label,
+    #touristTax label {
+        font-size: 0.9rem;
+    }
+
+    #booking-hotel select {
+        height: 35px;
+    }
+
+    #find-hotel {
+        height: 20px;
+    }
+
+}
+
+@media (max-width: 1366px) {
+
+    #servio-search-button {
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 1280px) {
+
+    .servio-booking-title {
+        font-size: 1.5rem;
+        padding: 5px 0;
+    }
+
+    .servio-search-input {
+        margin: 5px 0;
+    }
+
+    #servio-search-button {
+        height: 35px;
+        margin: 0;
+    }
+
+    #booking-hotel mselect {
+        height: 35px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .servio-search-form .card {
+        margin: 5px 0; 
+    }
+
+    #guests-adult {
+        margin: 5px 8% 5px 0;
+    }
+
+    .servio-booking-title {
+        font-size: 1.3rem;
+    }
+
+    #servio-search-button {
+        height: 30px;
+        line-height: 26px;
+    }
+
+    #booking-hotel {
+        height: 35px;
+    }
+
+    #booking-hotel select {
+        height: 30px;
+    }
+
+    #extraBeds {
+        margin: 5px 0 0 0;
+    }
+
+    .booking-date input,
+    .booking-guests select {
+        font-size: 1.3rem;
+        height: 36px;
+        padding: 15px 2px 0px;
+    }
+
+    .booking-guests select {
+        padding: 10px 2px 0px;
+    }
+
+    #find-hotel {
+        margin: 0;
+        height: 25px;
+    }
+
+    .booking-date input,
+    .booking-guests input.select-dropdown {
+        height: 35px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+
+    .servio-search-form {
+        padding: 2% 2% 5% 2%;
+    }
+
+    #carousel-wrapper .servio-search-form {
+        padding: 1% 5% 4% 5%;
+    }
+
+    #booking-hotel,
+    #booking-hotel input {
+        height: 30px;
+    }
+
+    #find-hotel {
+        margin: 0;
+        height: 20px;
+    }
+
+    #find-hotel a {
+        height: 25px;
+        line-height: 20px;
+    }
+
+    #servio-search-button {
+        min-height: 25px !important;
+        line-height: 24px !important;
+        font-size: 0.8rem !important;
+        height: 25px !important;
+    }
+
+    .booking-date input, .booking-guests input.select-dropdown {
+        height: 27px;
+        font-size: 1.3rem;
+    }
+
+    .booking-date input, .booking-guests input.select-dropdown {
+        height: 30px;
+        padding: 14px 2px 1px;
+    }
+
+    #booking [type="checkbox"]+label:before,
+    #booking [type="checkbox"]:not(.filled-in)+label:after {
+        width: 15px;
+        height: 15px;
+    }
+
+    #booking [type="checkbox"]:checked + label::before {
+        border-color: transparent #2196f3 #2196f3 transparent;
+        height: 15px;
+        left: -4px;
+        top: -2px;
+        width: 11px;
+    }
+
+    #booking [type="checkbox"]+label {
+        padding-left: 25px;
+        height: 18px;
+        line-height: 18px;
+    }
+
+    #extraBeds label,
+    #touristTax label {
+        margin: 0 0 5px 0;
+    }
+
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+
+    .servio-booking-title {
+        display: none;
+    }
+
+    .servio-search-form {
+        padding: 5px 15px;
+    }
+
+    #booking-hotel select {
+        height: 25px;
+    }
+
+    #servio-search-button {
+        height: 25px;
+        min-height: 25px !important;
+        line-height: 22px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .booking-date input,
+    .booking-guests select {
+        font-size: 1.3rem;
+        height: 30px;
+        padding: 5px 2px 0;
+    }
+
+    .booking-date input {
+        padding: 13px 2px 0;
+    }
+
+    .booking-guests select {
+        padding: 5px 2px 0;
+    }
+
+    #booking label {
+        margin-left: 0;
+    }
+
+    #booking button {
+        line-height: 28px;
+        font-size: 0.8rem;
+    }
+
+    #guests {
+        border: 0;
+    }
+
+    #extraBeds {
+        margin: 0;
+    }
+
+    #find-hotel {
+        display: none;
+    }
+
+    #extraBeds label, #touristTax label {
+        font-size: 0.8rem;
+    }
+
+
+}
+/* width 599px */
+@media (max-width: 599px) {
+
+    .servio-search-form {
+        padding: 0 7.5% 4% 7.5%;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+
+    .servio-booking-title {
+        font-size: 3rem;
+        background: #ebebeb;
+        position: relative;
+        left: 0;
+        padding: 15px 0px;
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        display: block;
+    }
+
+    .servio-search-input {
+        margin: 0;
+    }
+
+    #booking-hotel select {
+        height: 40px;
+    }
+
+    #find-hotel {
+        display: none;
+    }
+
+    #booking-dates,
+    #guests {
+        width: 94%;
+        padding: 0 3%;
+    }
+
+    #guests {
+        width: 100%;
+    }
+
+    #booking-dates input {
+        border-color: #fff;
+    }
+
+    .booking-guests {
+        width: 45%;
+        margin: 16px 0 10px 0 !important;
+    }
+
+    #extraBeds {
+        margin: 15px 0 0 15px;
+    }
+
+    #extraBeds label,
+    #touristTax label {
+        font-size: 1.0rem;
+    }
+
+    #touristTax {
+        margin: 7px 0 7px 15px;
+    }
+
+    .booking-date input, 
+    .booking-guests select {
+        font-size: 2.5rem;
+        height: 55px;
+        padding: 20px 2px 7px;
+    }
+
+    .booking-date label,
+    .booking-guests label {
+        font-size: 1rem;
+    }
+
+    .servio-search-form .card {
+        margin: 16px 0;
+    }
+
+    #guests .card {
+        margin: 15px 10px 15px 0 !important;
+    }
+
+    #booking button {
+        font-size: 1.1rem;
+    }
+
+    #servio-search-button {
+        height: 40px;
+    }
+
+}
+/* /width 599px */
+
+/* width 375px */
+@media (max-width: 375px) {
+    .servio-booking-title {
+        font-size: 2.5rem;
+    }
+}
+/* /width 375px */
+/* width 320px */
+@media (max-width: 320px) {
+    .servio-booking-title {
+        font-size: 2.2rem;
+    }
+}
+/* /width 320px */
